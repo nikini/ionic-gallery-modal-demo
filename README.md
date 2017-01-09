@@ -4,7 +4,7 @@ This is the repository that will help you with the [Ionic Gallery Modal](https:/
 
 ## Useful links
 * [Plugin page](https://github.com/nikini/ionic-gallery-modal)
-* ~~[Live Demo]~~ (in the works)
+* [Live Demo](http://cip.chat/ionic-gallery-modal-demo/)
 
 ## Usage
 
