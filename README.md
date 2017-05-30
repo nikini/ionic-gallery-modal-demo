@@ -1,4 +1,4 @@
-# Ionic 2 Gallery Modal Demo
+# Ionic Gallery Modal Demo
 
 This is the repository that will help you with the [Ionic Gallery Modal](https://github.com/nikini/ionic-gallery-modal), should you need any help with it. 
 
