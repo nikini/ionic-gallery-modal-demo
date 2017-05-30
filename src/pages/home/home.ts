@@ -4,7 +4,7 @@ import { GalleryModal } from 'ionic-gallery-modal';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
   private photos: any[] = [];
