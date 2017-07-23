@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
 // Import your library
-import { GalleryModalModule, GalleryModalHammerConfig } from 'ionic-gallery-modal';
+import * as ionicGalleryModal from 'ionic-gallery-modal';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { GalleryModalModule, GalleryModalHammerConfig } from 'ionic-gallery-moda
   ],
   imports: [
     BrowserModule,
-    GalleryModalModule,
+    ionicGalleryModal.GalleryModalModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -34,7 +34,7 @@ import { GalleryModalModule, GalleryModalHammerConfig } from 'ionic-gallery-moda
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, {
     provide: HAMMER_GESTURE_CONFIG,
-    useClass: GalleryModalHammerConfig,
+    useClass: ionicGalleryModal.GalleryModalHammerConfig,
   }]
 })
 export class AppModule {}
