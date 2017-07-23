@@ -19,6 +19,7 @@ export class HomePage {
         url: `assets/images/${i}.jpg`,
       });
     }
+    this.photos[2].title = 'This is a title';
   }
 
   private openModal() {

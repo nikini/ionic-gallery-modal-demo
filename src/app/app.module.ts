@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
@@ -9,9 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
 // Import your library
-// import { GalleryModalModule } from 'ionic-gallery-modal';
-import { GalleryModal } from 'ionic-gallery-modal';
-import { ZoomableImage } from 'ionic-gallery-modal';
+import { GalleryModalModule, GalleryModalHammerConfig } from 'ionic-gallery-modal';
 
 @NgModule({
   declarations: [
@@ -20,12 +18,10 @@ import { ZoomableImage } from 'ionic-gallery-modal';
     ContactPage,
     HomePage,
     TabsPage,
-
-    GalleryModal,
-    ZoomableImage,
   ],
   imports: [
     BrowserModule,
+    GalleryModalModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -35,8 +31,10 @@ import { ZoomableImage } from 'ionic-gallery-modal';
     ContactPage,
     HomePage,
     TabsPage,
-    GalleryModal,
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, {
+    provide: HAMMER_GESTURE_CONFIG,
+    useClass: GalleryModalHammerConfig,
+  }]
 })
 export class AppModule {}
