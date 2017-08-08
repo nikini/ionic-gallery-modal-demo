@@ -25,7 +25,7 @@ export class HomePage {
   private openModal() {
     let modal = this.modalCtrl.create(GalleryModal, {
       photos: this.photos,
-      initialSlide: 1, // The second image
+      initialSlide: 2, // The second image
     });
     modal.present();
   }
